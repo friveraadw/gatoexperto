@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
-import './CrearProductos.css';
 import TopNav from '../components/TopNav/TopNav';
 import Footer from '../components/Footer/Footer';
+import './Crearproductos.css';
 
 const CrearProducto = () => {
   const [nombre, setNombre] = useState('');
@@ -30,11 +30,6 @@ const CrearProducto = () => {
       setMensaje('Error al crear el producto');
       console.error(error);
     }
-  };
-
-  const handleVolverAlHome = () => {
-    // Implementa la lógica para volver al home aquí
-    history.push('/');
   };
 
   const handleImagenChange = (e) => {
