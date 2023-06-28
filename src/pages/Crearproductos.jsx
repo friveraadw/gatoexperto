@@ -16,7 +16,7 @@ const CrearProducto = () => {
 
   const handleCrearProducto = async () => {
     try {
-      const response = await axios.post('https://backend-ecommerce-chi.vercel.app/productos/crear', {
+      const response = await axios.post('https://frontend-ecommerce-gamma.vercel.app/crear-productos-administrador', {
         nombre,
         descripcion,
         precio,
