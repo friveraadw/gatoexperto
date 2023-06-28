@@ -16,7 +16,7 @@ const CrearProducto = () => {
 
   const handleCrearProducto = async () => {
     try {
-      const response = await axios.post('https://frontend-ecommerce-gamma.vercel.app/crear-productos-administrador', {
+      const response = await axios.post('https://backend-ecommerce-chi.vercel.app/productos/crear', {
         nombre,
         descripcion,
         precio,
@@ -24,10 +24,8 @@ const CrearProducto = () => {
         imagen,
         precio_oferta: precioOferta
       });
-      setMensaje('Producto creado correctamente');
       console.log(response.data.message); // Success message from the backend
     } catch (error) {
-      setMensaje('Error al crear el producto');
       console.error(error);
     }
   };
